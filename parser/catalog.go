@@ -177,7 +177,7 @@ func (self *Table) tagToRecord(value *Value) *ordereddict.Dict {
 						// In python time.mktime((1900,1,1,0,0,0,0,365,0))
 						result.Set(column.Name,
 							time.Unix(int64(days_since_1900*24*60*60)+
-								-2208988800, 0))
+								-2208988800, 0).UTC())
 
 					default:
 						// We have no idea
