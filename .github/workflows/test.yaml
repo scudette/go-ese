@@ -25,7 +25,7 @@ jobs:
 
     - name: Store Artifacts
       shell: bash
-      if: !success()
+      if: ! success()
       run: |
         go test -v -update
 
